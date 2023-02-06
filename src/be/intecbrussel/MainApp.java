@@ -32,6 +32,21 @@ public class MainApp {
         System.out.println(" ---- oefening 2 ---- ");
         // 2. Schrijf een programma dat van een gegeven bedrag in euro (1 tot 500 euro) berekent
         // welke biljetten en stukken je nodig hebt om het bedrag uit te betalen en hoeveel van elk.
+        double bedraag = 200;
+        int biljetten  = 0;
+        int stukken = 0;
+        
+        boolean evenGetal = bedraag % 2 == 0;
+        boolean onevenGetal = bedraag % 2 != 0;
+
+        if (bedraag >= 1 && bedraag <= 500 && evenGetal) {
+
+        } else if (bedraag >= 1 && bedraag <= 500 && onevenGetal) {
+            
+        } else {
+            System.out.println("Het bedrag kon niet worden berekend!");
+            System.out.println("Het bedraag mag minimum 1€ en maximum 500€ zijn.");
+        }
 
         System.out.println(" ---- oefening 3 ---- ");
         // 3. Schrijf een programma met 2 variabelen. Zorg dat je de basic calculaties (+, -, /, *, %) kunt uitvoeren.
@@ -44,27 +59,27 @@ public class MainApp {
         String operators = "*";
 
         switch (operators) {
-            case "+" : {
+            case "+" -> {
                 res = a + b;
-                System.out.println(a + " + " + b + " = " + res );
-                break;
-            } case "-" : {
+                System.out.println(a + " + " + b + " = " + res);
+            }
+            case "-" -> {
                 res = a - b;
-                System.out.println(a + " - " + b + " = " + res );
-                break;
-            } case "/" : {
+                System.out.println(a + " - " + b + " = " + res);
+            }
+            case "/" -> {
                 res = a / b;
-                System.out.println(a + " / " + b + " = " + res );
-                break;
-            } case "*" : {
+                System.out.println(a + " / " + b + " = " + res);
+            }
+            case "*" -> {
                 res = a * b;
-                System.out.println(a + " * " + b + " = " + res );
-                break;
-            } case "%" : {
+                System.out.println(a + " * " + b + " = " + res);
+            }
+            case "%" -> {
                 res = a % b;
-                System.out.println(a + " % " + b + " = " + res );
-                break;
-            } default: {
+                System.out.println(a + " % " + b + " = " + res);
+            }
+            default -> {
                 System.out.println("Ongeldige operator!");
             }
         }
